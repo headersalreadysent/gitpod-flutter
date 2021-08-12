@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './ui/bottomBar.dart';
 
 void main() => runApp(MyApp());
 
@@ -6,11 +7,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Gitpod',
+      title: 'Eliminasyon',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Eliminasyon'),
     );
   }
 }
@@ -29,7 +30,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _incrementCounter() {
     setState(() {
-      _counter++;
+      _counter=_counter+3;
     });
   }
 
@@ -44,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              ':',
+              'Clicked :',
             ),
             Text(
               '$_counter',
@@ -58,6 +59,8 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Gitpod',
         child: Icon(Icons.add),
       ),
+      floatingActionButtonLocation:FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar:BottomBar()
     );
   }
 }
